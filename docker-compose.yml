@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: prince1
+      POSTGRES_PASSWORD: prince1
+      POSTGRES_DB: reservations
+    ports:
+      - "5433:5433"
