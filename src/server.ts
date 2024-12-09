@@ -6,10 +6,12 @@ import GetAllSites from "./domain/reservation/application/use-cases/get-all-site
 import FindSite from "./domain/reservation/application/use-cases/find-site-by-id";
 import SiteController from "./presentation/controllers/SiteController";
 import multer from 'multer';
+import cors from 'cors';
 import path from 'path';
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 app.use('/uploads', express.static('uploads'));
 
 const upload = multer({
